@@ -1,0 +1,85 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  .container {
+    width: 50%;
+    margin: 1em auto;
+    border: 1px solid #ddd;
+    padding: .3em .6em;
+  }
+  .container:after, .container:before {
+    display: table;
+    content: " ";
+    line-height: 0;
+    font-size: 0;
+    clear: both;
+  }
+  .container p {
+    font-size: .9em;
+    color: #777;
+    margin-bottom: 1.5em;
+    font-style: italic;
+  }
+  
+  .group-header {
+    float: right;
+    font-weight: 700;
+    width: 20%;
+    margin: .7em 0 1em 0;
+  }
+  .group-header span {
+    float: left;
+    width: 50%;
+    text-align: center;
+    display: block;
+  }
+  
+  h3 {
+    position: relative;
+    font-weight: 700;
+    margin: .7em 0 1em 0;
+  }
+  h3:after, h3:before {
+    display: table;
+    content: " ";
+    line-height: 0;
+    font-size: 0;
+    clear: both;
+  }
+  h3 span {
+    float: left;
+    width: 10%;
+    text-align: center;
+    display: block;
+  }
+  h3 span:first-child {
+    width: 40%;
+    text-align: left;
+  }
+  h3 .dots {
+    width: 40%;
+    border-bottom: 2px dotted #ccc;
+    margin-top: .8em;
+  }
+  .edit,.delete{
+      font-style: italic;
+      font-size: 17px;
+    cursor: pointer;
+      font-weight: normal;
+  }
+  .edit{
+    color: blue;
+  }
+  .delete{
+
+    color: red;
+
+  }
+  p{
+      line-height: 2;
+  }
+  .form-control{
+      height: 20px;
+  }

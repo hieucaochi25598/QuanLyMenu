@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="text-center display-4">Menu</div>
+    <button id="btn-openModal" class="btn btn-success" data-toggle="modal" data-target="#modelId">Thêm menu</button>
+    <div id="content-menu">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Cơm chiên <i class="edit">sửa</i> <i class="delete">xóa</i></h3>
+          <div class="row">
+            <div class="col-6">
+              <p> Cơm chiên gà xối mở</p>
+            </div>
+            <div class="col-2"><img src="https://picsum.photos/35/35" /></div>
+            <div class="col-4">
+              <p>35.000 đồng</p>
+            </div>
+            <div class="col-6">
+              <p>Cơm chiên cá mặn</p>
+            </div>
+            <div class="col-2"><img src="https://picsum.photos/35/35" /></div>
+            <div class="col-4">
+              <p>35.000 đồng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Cơm chiên <i class="edit">sửa</i> <i class="delete">xóa</i></h3>
+          <div class="row">
+            <div class="col-6">
+              <p> Cơm chiên gà xối mở</p>
+            </div>
+            <div class="col-2"><img src="https://picsum.photos/35/35" /></div>
+            <div class="col-4">
+              <p>35.000 đồng</p>
+            </div>
+            <div class="col-6">
+              <p>Cơm chiên cá mặn</p>
+            </div>
+            <div class="col-2"><img src="https://picsum.photos/35/35" /></div>
+            <div class="col-4">
+              <p>35.000 đồng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-tile">Menu</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <span>Mã danh mục</span>
+              <input class="form-control" id="MaDanhMuc" />
+            </div>
+            <div class="form-group">
+              <span>Tên danh mục</span>
+              <input class="form-control" id="TenDanhMuc" />
+            </div>
+            <div class="form-group">
+              <span>Hình Ảnh</span>
+              <input class="form-control" id="HinhAnh" />
+            </div>
+            <div class="form-group">
+              <h3>Danh mục món ăn <button id="btnThemMon"> + </button></h3>
+              <div class="danh-sach-mon-an">
+                <!-- <div class="mon-an">
+                  <div class="form-group row">
+                    <div class="col-6 mt-2">
+                      <input class="form-control maMonAn" placeholder="Mã món" />
+                    </div>
+                    <div class="col-6 mt-2">
+                      <input class="form-control tenMonAn" placeholder="Tên món" />
+                    </div>
+                    <div class="col-6 mt-2">
+                      <input class="form-control gia" placeholder="Giá món" />
+                    </div>
+                    <div class="col-6 mt-2">
+                      <input class="form-control hinhAnh" placeholder="Link hình" />
+                    </div>
+                  </div>
+                  <div class="text-right"><button class=" btn-danger btnXoaMon">Xóa </button></div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            <button id="btn-themMenu" type="button" class="btn btn-primary">Lưu</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Chỉnh Sửa Menu-->
+    <div class="modal fade" id="modalSuaMenu" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-tile">Menu</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <span>Mã danh mục</span>
+              <input class="form-control" id="MaDanhMucChinhSua" />
+            </div>
+            <div class="form-group">
+              <span>Tên danh mục</span>
+              <input class="form-control" id="TenDanhMucChinhSua" />
+            </div>
+            <div class="form-group">
+              <span>Hình Ảnh</span>
+              <input class="form-control" id="HinhAnhChinhSua" />
+            </div>
+            <div class="form-group">
+              <h3>Danh mục món ăn <button id="btnThemMonChinhSua"> + </button></h3>
+              <div class="danh-sach-mon-an-chinh-sua">
+                <!-- <div class="mon-an-chinh-sua">
+                  <div class="form-group row">
+                    <div class="col-6 mt-2">
+                      <input class="form-control maMonAn" placeholder="Mã món" />
+                    </div>
+                    <div class="col-6 mt-2">
+                      <input class="form-control tenMonAn" placeholder="Tên món" />
+                    </div>
+                    <div class="col-6 mt-2">
+                      <input class="form-control gia" placeholder="Giá món" />
+                    </div>
+                    <div class="col-6 mt-2">
+                      <input class="form-control hinhAnh" placeholder="Link hình" />
+                    </div>
+                  </div>
+                  <div class="text-right"><button class=" btn-danger btnXoaMon">Xóa </button></div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            <button id="btn-capNhat" type="button" class="btn btn-danger">Cập nhật</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="./models/menu.js"></script>
+    <script src="./controllers/index.js"></script>
+</body>
+
+</html>
